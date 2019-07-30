@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>飘窗</title>
+</head>
+
+<body style="height: 3000px;position: relative;">
+    <div id="bay-window">
+        <a href="www.baidu.com" title="飘窗文字" style="display:block;">
+            <img src="./images/js-good.jpg" width="300">
+        </a>
+        <p style="color:red;float:right;font-size:12px;cursor:pointer;text-align: right;" onclick="this.parentNode.style.display='none'">闭嘴</p>
+    </div>
+    <script src="./js/baywindow.js"></script>
+    <script>
+    new Bw('bay-window', 100, 200, 0, 0).start(40)
+    </script>
+</body>
+
+
+</html>
