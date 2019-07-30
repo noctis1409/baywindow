@@ -1,4 +1,4 @@
-function Bw(dom, left, top, ud, lr) {
+function BayWindow(dom, left, top, ud, lr) {
     this.div = document.getElementById(dom);
     this.yon = ud;
     this.xon = lr;
@@ -12,7 +12,7 @@ function Bw(dom, left, top, ud, lr) {
     this.div.style.width = this.div.getElementsByTagName("img")[0].offsetWidth;
 }
 
-Bw.prototype.changePos = function () {
+BayWindow.prototype.changePos = function () {
     width = document.documentElement.clientWidth;
     height = document.documentElement.clientHeight;
     scrollLeft = document.documentElement.scrollLeft;
@@ -49,7 +49,7 @@ Bw.prototype.changePos = function () {
     }
 }
 
-Bw.prototype.start = function (speed) {
+BayWindow.prototype.start = function (speed) {
     var that = this
     var st = setInterval(function () {
         that.changePos()
