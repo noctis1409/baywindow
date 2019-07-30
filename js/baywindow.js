@@ -1,11 +1,10 @@
-function BayWindow(dom, left, top, ud, lr) {
+function BayWindow(dom, option) {
     this.div = document.getElementById(dom);
-    this.yon = ud;
-    this.xon = lr;
+    this.yon = option ? option.y || 0 : 0;
+    this.xon = option ? option.x || 0 : 0;
     this.step = 1;
-    this.delay = 40;
-    this.xPos = left;
-    this.yPos = top;
+    this.xPos = option ? option.left || 0 : 0;
+    this.yPos = option ? option.top || 0 : 0;
     this.div.style.position = "absolute";
     this.div.style.zIndex = 9999;
     this.div.style.display = "block";
@@ -51,6 +50,7 @@ BayWindow.prototype.changePos = function () {
 
 BayWindow.prototype.start = function (speed) {
     var that = this
+    speed = speed || 40
     var st = setInterval(function () {
         that.changePos()
     }, speed)

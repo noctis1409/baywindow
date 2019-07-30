@@ -15,7 +15,12 @@
     </div>
     <script src="./js/baywindow.js"></script>
     <script>
-    new BayWindow('bay-window', 100, 200, 0, 0).start(40)
+        new BayWindow('bay-window', {
+            left: 200,
+            top: 200,
+            x: 1,
+            y: 1
+        }).start(40)
     </script>
 </body>
 
