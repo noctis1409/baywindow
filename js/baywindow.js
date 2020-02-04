@@ -12,10 +12,10 @@ function BayWindow(dom, option) {
 }
 
 BayWindow.prototype.changePos = function () {
-    width = document.documentElement.clientWidth;
-    height = document.documentElement.clientHeight;
-    scrollLeft = document.documentElement.scrollLeft;
-    scrollTop = document.documentElement.scrollTop;
+    width = document.documentElement.clientWidth || document.body.clientWidth;
+    height = document.documentElement.clientHeight || document.body.clientHeight;
+    scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
+    scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     Hoffset = this.div.offsetHeight;
     Woffset = this.div.offsetWidth;
     this.div.style.left = this.xPos + scrollLeft + 'px';
